@@ -1,17 +1,13 @@
 import SwiftUI
-import Playgrounds
 
 struct ContentView: View {
+    @State private var store = TodoStore()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TodoListView(store: store)
     }
 }
 
 #Preview {
     ContentView()
-}
-
-#Playground {
-    _ = 1 + 2
 }
